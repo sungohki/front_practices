@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Header -->
+      <div id="header">
+        <div class="banner">
+          <h1 class="title">라이브 상품 등록</h1>
+          <div class="menu">
+            <input type="radio" id="menu1" name="menu" value="1" checked />
+            <label for="menu1">1.상품등록</label>
+            <input type="radio" id="menu2" name="menu" value="2" />
+            <label for="menu2">2.화면 테스트</label>
+            <input type="radio" id="menu3" name="menu" value="3" />
+            <label for="menu3">3.라이브 시작</label>
+          </div>
+        </div>
+        <div class="view_mode">
+          <label>
+            <input type="checkbox" name="dark_mode" id="dark_mode" />
+            <div class="toggle_effect">
+              <div class="toggle_button"></div>
+            </div>
+          </label>
+          <div class="icon">
+            <p>🌞</p>
+            <p>🌙</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashed"></div>
+      <!-- Main -->
+      <div id="main">
+        <form method="get">
+          <div class="section">
+            <div class="item_form">
+              <div class="card">
+                <h4 class="title">상품명</h4>
+                <input
+                  type="text"
+                  placeholder="플레이스 홀더 테스트"
+                  required
+                />
+                <div class="option">
+                  <label>
+                    <input type="checkbox" name="is_monopoly" id="" />
+                    <p>독점 판매</p>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="is_discount" id="" />
+                    <p>할인 적용</p>
+                  </label>
+                </div>
+              </div>
+              <div class="card">
+                <h4 class="title">기존 가격 (원)</h4>
+                <input
+                  type="number"
+                  placeholder="숫자만 입력해주세요."
+                  required
+                />
+              </div>
+              <div class="card">
+                <h4 class="title">할인 퍼센트</h4>
+                <div>
+                  <input
+                    type="number"
+                    required
+                    placeholder="숫자만 입력해주세요."
+                  />
+                  <button>할인가 계산</button>
+                </div>
+              </div>
+              <div class="card">
+                <h4 class="title">태그</h4>
+                <input type="text" placeholder="최대 10개까지 입력 가능" />
+                <ul class="list">
+                  <li>
+                    <p>상의</p>
+                    <div>✖</div>
+                  </li>
+                  <li>
+                    <p>놈코어</p>
+                    <div>✖</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4 class="title">채팅방 공지 문구 입력</h4>
+                <input
+                  type="text"
+                  required
+                  placeholder="ex. 댓글로 상품 문의사항을 알려주시면 바로 답변해드립니다."
+                />
+                <div class="option">
+                  <label>
+                    <input type="radio" name="comment" value="true" checked />
+                    <p>댓글 허용</p>
+                  </label>
+                  <label>
+                    <input type="radio" name="comment" value="false" />
+                    <p>댓글 허용 안함</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="item_preview">
+              <div class="screen_view">
+                <p>테스트 영상을 확인해주세요</p>
+              </div>
+              <div class="screen_play">테스트 영상 확인</div>
+            </div>
+          </div>
+          <div class="decide">
+            <button>등록 취소</button>
+            <button type="submit">다음 단계</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

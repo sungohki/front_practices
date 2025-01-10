@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  max-width: 1920px;
+  width: 100vw;
+  min-width: 1600px;
+  max-height: 1080px;
+  height: 100vh;
+  min-height: 900px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+  color: rgb(80, 80, 80);
+}
+body:has(#dark_mode:checked) {
+  background-color: grey;
+  color: white;
+}
+div.dashed {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px dashed lightgrey;
+}
+h4 {
+  margin-bottom: 5px;
+}
+
+/* Container */
+#container {
+  background-color: white;
+  width: 80%;
+  height: 90%;
+  padding: 40px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+#container:has(input#dark_mode:checked) {
+  background-color: rgb(50, 50, 50);
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+#header > .banner {
+  display: flex;
+}
+#header > .banner > .title {
+  margin-right: 20px;
+}
+#header > .banner > .menu {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header > .banner > .menu > input {
+  display: none;
+}
+#header > .banner > .menu > label {
+  font-weight: 400;
+  transition: 0.2s ease;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#header > .banner > .menu > label:hover {
+  background-color: aliceblue;
+  font-size: 120%;
+}
+
+body:has(#dark_mode:checked) #header > .banner > .menu > label:hover {
+  background-color: lightslategray;
+  font-size: 120%;
+}
+#header > .banner > .menu > input:checked + label {
+  color: dodgerblue;
+  font-weight: 800;
+  font-size: 120%;
+}
+body:has(#dark_mode:checked) #header > .banner > .menu > input:checked + label {
+  color: lightblue;
+  font-weight: 800;
+  font-size: 120%;
+}
+#header > .view_mode {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#header > .view_mode > .icon {
+  margin-right: 5px;
+  cursor: default;
+}
+#header > .view_mode > label > .toggle_effect {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(201, 201, 201);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+#header > .view_mode > label > .toggle_effect > .toggle_button {
+  background-color: white;
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+  transition: 0.2s ease;
+}
+#header > .view_mode > label > .toggle_effect > .toggle_button:hover {
+  background-color: dodgerblue;
+}
+#header > .view_mode > label > input {
+  display: none;
+}
+#header > .view_mode > label > input:checked + .toggle_effect > .toggle_button {
+  background-color: dodgerblue;
+  transform: translateX(100%);
+}
+#header > .view_mode > .icon > p:last-child {
+  display: none;
+}
+#header > .view_mode > label:has(input:checked) + .icon > p:first-child {
+  display: none;
+}
+#header > .view_mode > label:has(input:checked) + .icon > p:last-child {
+  display: block;
+}
+/* Main */
+#main {
+  width: 60%;
+  height: 80%;
+  /* background-color: aliceblue; */
+  margin: 0 auto;
+}
+#main .section,
+#main > form {
+  width: 100%;
+  height: 100%;
+}
+#main .section {
+  display: flex;
+  justify-content: space-between;
+}
+#main .section > .item_form {
+  width: 55%;
+  height: 90%;
+  /* background-color: beige; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#main .section > .item_form > .card:nth-child(3) > div > input,
+#main .section > .item_form > .card > input {
+  background-color: rgb(245, 245, 245);
+  outline: 0;
+  border: 0;
+  border-bottom: 1.8px solid lightgray;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  /* color: rgb(230, 230, 230); */
+  font-size: 16px;
+}
+#main .section > .item_form > .card input::placeholder {
+  font-size: 12px;
+}
+
+body:has(#dark_mode:checked) #main .section > .item_form > .card input {
+  background-color: grey;
+  color: whitesmoke;
+}
+
+body:has(#dark_mode:checked)
+  #main
+  .section
+  > .item_form
+  > .card
+  input::placeholder {
+  color: whitesmoke;
+  opacity: 40%;
+}
+#main .section > .item_form > .card:nth-child(3) > div {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#main .section > .item_form > .card:nth-child(3) > div > input {
+  width: 70%;
+  border-radius: 0;
+}
+#main .section > .item_form > .card:nth-child(3) > div > button {
+  background-color: rgb(50, 50, 50);
+  width: 30%;
+  height: 40px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+#main .section > .item_form > .card:nth-child(3) > div > button:hover {
+  font-size: 105%;
+}
+#main .section > .item_form > .card input:focus {
+  color: grey;
+  border: 1.8px solid dodgerblue;
+}
+body:has(#dark_mode:checked) #main .section > .item_form > .card input:focus {
+  border: 1.8px solid coral;
+}
+body:has(#dark_mode:checked)
+  #main
+  .section
+  > .item_form
+  > .card:nth-child(3)
+  > div
+  > button {
+  background-color: black;
+}
+/* input:invalid {
+  border: 1.8px solid red;
+} */
+#main .section > .item_form > .card > .list,
+#main .section > .item_form > .card > .option {
+  display: flex;
+  margin-top: 10px;
+}
+#main .section > .item_form > .card > .option > label {
+  display: flex;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#main .section > .item_form > .card > .option > label > input {
+  margin-right: 10px;
+}
+#main .section > .item_form > .card > .list > li {
+  background-color: lightgrey;
+  padding: 10px;
+  border-radius: 50px;
+  margin-right: 10px;
+  display: flex;
+  font-size: 14px;
+  cursor: default;
+}
+body:has(#dark_mode:checked) #main .section > .item_form > .card > .list > li {
+  background-color: grey;
+}
+#main .section > .item_form > .card > .list > li > p {
+  margin-right: 5px;
+}
+#main .section > .item_form > .card > .list > li > div {
+  cursor: pointer;
+}
+#main .section > .item_form > .card > .list > li > div:hover {
+  transform: scale(120%);
+}
+#main .section > .item_preview {
+  width: 35%;
+  height: 90%;
+  /* background-color: lightblue; */
+}
+#main .section > .item_preview > .screen_view {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(50, 50, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+body:has(#dark_mode:checked) #main .section > .item_preview > .screen_view {
+  background-color: black;
+}
+#main .section > .item_preview > .screen_play {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 15px;
+  color: dodgerblue;
+  text-align: center;
+  padding: 10px;
+  transition: 0.5s ease;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#main .section > .item_preview > .screen_play:hover {
+  color: white;
+  background-color: dodgerblue;
+  transition: 0.5s ease;
+}
+body:has(#dark_mode:checked) #main .section > .item_preview > .screen_play {
+  color: lightblue;
+}
+body:has(#dark_mode:checked)
+  #main
+  .section
+  > .item_preview
+  > .screen_play:hover {
+  color: dodgerblue;
+  background-color: lightblue;
+  opacity: 90%;
+}
+
+#main .decide {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .decide > button {
+  width: 200px;
+  background-color: white;
+  color: dodgerblue;
+  padding: 20px;
+  border: 1.5px dodgerblue solid;
+  border-radius: 3px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+#main .decide > button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+body:has(#dark_mode:checked) #main .decide > button {
+  background-color: lightblue;
+  border: 1.5px lightblue solid;
+  color: dodgerblue;
+}
+body:has(#dark_mode:checked) #main .decide > button:hover {
+  background-color: dodgerblue;
+  border: 1.5px dodgerblue solid;
+  color: white;
+}
+
+/* Footer */
