@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slack Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div class="left">
+          <div class="status">
+            <div class="btn1" style="background-color: crimson"></div>
+            <div class="btn1" style="background-color: orange"></div>
+            <div class="btn1" style="background-color: yellowgreen"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="work">
+            <p>←</p>
+            <p>→</p>
+          </div>
+          <div class="time"><p>└</p></div>
+          <div class="search">
+            <form>
+              <input
+                type="search"
+                name="message_to_search"
+                id="searchBar"
+                placeholder="🔎 Search DesignerKR"
+              />
+            </form>
+          </div>
+          <div class="help"><p>?</p></div>
+        </div>
+        <div class="right">
+          <div class="profile">
+            <div class="nation">🚩</div>
+            <div class="image"></div>
+          </div>
+          <div class="status"></div>
+        </div>
+      </div>
+      <div id="main">
+        <div class="aside">
+          <div class="ch_tab">
+            <label>
+              <div>A</div>
+              <input type="radio" name="ch" value="A" checked />
+            </label>
+            <label>
+              <div>B</div>
+              <input type="radio" name="ch" value="B" />
+            </label>
+            <label>
+              <div>C</div>
+              <input type="radio" name="ch" value="C" />
+            </label>
+            <div class="ch_add">+</div>
+          </div>
+          <div class="ch_nav">
+            <div class="ch_profile">
+              <div class="profile_name">
+                <p>DesignerKR</p>
+                <p class="drop_btn">∨</p>
+              </div>
+              <div class="modify_btn">↙</div>
+            </div>
+            <div class="ch_menu">
+              <div class="personal menu">
+                <label>
+                  <div class="flex">
+                    <p>@</p>
+                    <p>Mentions & reactions</p>
+                  </div>
+                  <input type="radio" name="view" checked />
+                </label>
+                <label>
+                  <div class="flex">
+                    <p>※</p>
+                    <p>Saved items</p>
+                  </div>
+                  <input type="radio" name="view" />
+                </label>
+                <label>
+                  <div class="flex">
+                    <p>⁝</p>
+                    <p>More</p>
+                  </div>
+                  <input type="radio" name="view" />
+                </label>
+              </div>
+              <div class="channels menu">
+                <label>
+                  <div class="flex">
+                    <p class="toggle">▶</p>
+                    <p>Channels</p>
+                  </div>
+                  <input type="checkbox" checked />
+                </label>
+                <div class="list">
+                  <label>
+                    <div class="flex">
+                      <p class="icon">#</p>
+                      <p>One</p>
+                    </div>
+                    <input type="radio" name="view" id="" />
+                  </label>
+                  <label>
+                    <div class="flex">
+                      <p class="icon">#</p>
+                      <p>Two</p>
+                    </div>
+                    <input type="radio" name="view" id="" />
+                  </label>
+                  <label>
+                    <div class="flex">
+                      <p class="icon">#</p>
+                      <p>Three</p>
+                    </div>
+                    <input type="radio" name="view" id="" />
+                  </label>
+                  <label>
+                    <div class="flex">
+                      <p class="add">+</p>
+                      <p>Add channels</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="message menu">
+                <label>
+                  <div class="flex">
+                    <p class="toggle">▶</p>
+                    <p>Direct messages</p>
+                  </div>
+                  <input type="checkbox" checked />
+                </label>
+                <div class="list">
+                  <label>
+                    <div class="flex">
+                      <div class="image"></div>
+                      <p>jiwon</p>
+                      <p>you</p>
+                    </div>
+                    <input type="radio" name="view" id="" />
+                  </label>
+                  <label>
+                    <div class="flex">
+                      <div class="image"></div>
+                      <p>Alley</p>
+                    </div>
+                    <input type="radio" name="view" id="" />
+                  </label>
+                  <label>
+                    <div class="flex">
+                      <div class="image"></div>
+                      <p>Cameron</p>
+                    </div>
+                    <input type="radio" name="view" id="" />
+                  </label>
+                  <label>
+                    <div class="flex">
+                      <p class="add">+</p>
+                      <p>Add Teammates</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section"></div>
+        <div class="aside"></div>
+      </div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
