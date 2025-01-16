@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: lightgray;
+}
+input[type='file'],
+input[type='checkbox'],
+input[type='button'],
+input[type='radio'] {
+  display: none;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  display: flex;
+  width: 1600px;
+  /* width: 95%; */
+  height: fit-content;
+  min-height: calc(90vh - 40px);
+  /* padding: 20px; */
+  background-color: rgb(235, 235, 235);
+  margin: 20px auto;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Header */
+#header {
+  width: 200px;
+  padding-top: 30px;
+  /* padding-left: 20px; */
+  /* height: 100%; */
+  background-color: #202634;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+#header > .logo {
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+#header > .menu {
+  display: flex;
+  flex-direction: column;
+}
+#header > .menu > label {
+  padding-left: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+#header > .menu > label:hover,
+#header > .menu > label:has(input[type='radio']:checked) {
+  /* padding-left: 26px; */
+  border-left: 4px white solid;
+  color: white;
+  transition: 0.2s ease;
+}
+
+/* # Main */
+#main {
+  width: 100%;
+}
+/* ## main nav */
+#main > .nav {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+#main > .nav > .title {
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-left: 30px;
+}
+#main > .section > .list > .card .submit,
+#main > .nav > .submit {
+  width: 100px;
+  height: 45px;
+  font-size: 1em;
+  background-color: dodgerblue;
+  color: white;
+  margin-right: 30px;
+  margin-left: 10px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main > .nav > .submit:hover {
+  transition: 0.4s ease;
+  background-color: blue;
+  /* font-weight: 700;
+  font-size: 120%; */
+  cursor: pointer;
+}
+/* ## main section*/
+#main > .section {
+  width: 100%;
+  height: calc(100% - 60px);
+  /* background-color: lightblue; */
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+#main > .section > .list {
+  width: 50%;
+}
+#main > .section > .list > .card {
+  margin: 10px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+}
+#main > .section .card > .toggle {
+  position: absolute;
+  display: flex;
+  /* justify-content: start; */
+  align-items: center;
+  padding: 0 5px;
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  right: 30px;
+  top: 30px;
+  background-color: lightblue;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+#main > .section .card > .toggle:hover,
+#main > .section .card > .toggle:has(input:checked) {
+  background-color: dodgerblue;
+}
+#main > .section .card > .toggle > .button {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50px;
+  transition: 0.2s ease;
+}
+#main > .section .card > .toggle:has(input:checked) > .button {
+  transform: translateX(100%);
+  background-color: aliceblue;
+}
+#main > .section .card > .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#main > .section .card > .title > .isRequired {
+  color: red;
+  /* display: none; */
+}
+/* #main > .section .card:has(textarea[required]) > .title > .isRequired,
+#main > .section .card:has(input[required]) > .title > .isRequired {
+  display: inline;
+} */
+#main > .section > form.list .card textarea,
+#main > .section > form.list .card select,
+#main > .section .card input {
+  width: 100%;
+  color: grey;
+  background-color: whitesmoke;
+  padding: 15px;
+  border: 1px lightgrey solid;
+  margin: 5px 0;
+}
+#main > .section > form.list .card > select {
+  color: lightgrey;
+  font-weight: 600;
+  /* font-size: 1em; */
+}
+#main > .section > form.list .card > textarea {
+  resize: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  height: 140px;
+}
+#main > .section > form.list .card textarea::placeholder,
+#main > .section > form.list .card input[type='text']::placeholder {
+  font-weight: 700;
+  /* font-size: 1.2em; */
+  color: lightgrey;
+  line-height: 1.5em;
+}
+#main > .section > form.list .card select:focus,
+#main > .section > form.list .card textarea:focus,
+#main > .section > form.list .card input:focus {
+  outline: 2px solid dodgerblue;
+}
+#main > .section > form.list > .card > .info {
+  color: grey;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+#main > .section > form.list > .card > .info + label {
+  color: #416bde;
+  background-color: #dbeaff;
+  padding: 10px 20px;
+  border: 5px;
+  transition: 0.4s ease;
+}
+#main > .section > form.list > .card > .info + label:hover {
+  color: white;
+  background-color: #416bde;
+  cursor: pointer;
+}
+#main > .section > form.list > .card .option {
+  color: rgb(0, 0, 0, 0.6);
+  font-weight: 600;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+}
+#main > .section > form.list > .card:has(#group_buy_toggle) > .items {
+  display: none;
+}
+#main > .section > form.list > .card:has(#group_buy_toggle:checked) > .items {
+  display: block;
+}
+#main > .section > form.list > .card > .items {
+  display: flex;
+  flex-direction: column;
+}
+#main > .section > form.list > .card > .items > .item {
+  margin: 30px 0;
+}
+#main > .section > form.list > .card > .items > .item > .name {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#main > .section > form.list > .card > .items > .item > .content > label {
+  margin-bottom: 10px;
+  display: flex;
+}
+#main > .section > form.list > .card > .items > .item > .content > label > div {
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  background-color: lightgrey;
+  transition: 0.1s ease;
+  margin-right: 10px;
+}
+#main
+  > .section
+  > form.list
+  > .card
+  > .items
+  > .item
+  > .content
+  > label:has(input[type='radio']:checked)
+  > div {
+  background-color: white;
+  border: 6px solid dodgerblue;
+}
+#main .group_buy_num_header,
+#main .group_buy_num {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .card .group_buy_num > input,
+#main .card .group_buy_num_header > p {
+  width: 48%;
+}
+#main .card .group_buy_num > p {
+  text-align: center;
+}
+#main .card .amenities {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .card .amenities > .amenity {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+#main .card .amenities > .amenity:hover {
+  background-color: whitesmoke;
+}
+#main .card .amenities > .amenity > div {
+  width: 15px;
+  height: 15px;
+  background-color: lightgrey;
+  margin-right: 5px;
+  transition: 0.2s ease;
+}
+#main .card .amenities > .amenity:has(input:checked) > div {
+  background-color: white;
+  border: 4px dodgerblue solid;
+}
+
+#main > .section > .preview {
+  width: 30%;
+  height: 1000px;
+}
+#main > .section > .preview {
+  margin: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+#main > .section > .preview > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 80px;
+  border-bottom: 1px solid lightgrey;
+}
+#main > .section > .preview > .header > .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+#main > .section > .preview > .header > label {
+  color: #416bde;
+  background-color: #dbeaff;
+  padding: 10px 20px;
+  border: 5px;
+  transition: 0.4s ease;
+}
+#main > .section > .preview > .header > label:hover {
+  color: white;
+  background-color: #416bde;
+  cursor: pointer;
+}
+#main > .section > .preview > .main {
+  height: calc(100% - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#phone {
+  width: 90%;
+  height: 90%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+#phone > .screen {
+  width: 90%;
+  height: 95%;
+  background-color: black;
+  border-radius: 5px;
+}
