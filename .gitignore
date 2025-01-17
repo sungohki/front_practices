@@ -1,5 +1,7 @@
 # Directory for tests
 */test
+test/*
+doit/*
 
 # Logs
 logs
