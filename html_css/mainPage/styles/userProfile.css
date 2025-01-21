@@ -1,0 +1,20 @@
+/* Main */
+#main {
+  display: flex;
+}
+#main .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .card1 {
+  background: url('../images/prof01_txt.png') center/contain no-repeat;
+}
+#main .card3 {
+  background: url('../images/prof02_txt.png') center/contain no-repeat;
+}
+#main .card2 {
+  background: url('../images/prof02.png') center/contain no-repeat;
+}
