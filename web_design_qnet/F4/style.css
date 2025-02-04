@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:visited,
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+}
+
+/* A */
+#header {
+  width: 1340px;
+  height: 100px;
+  background-color: aliceblue;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid black;
+  border-bottom: 0;
+
+  & .logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px dotted black;
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+  & > div {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    & .menu {
+      display: flex;
+      margin-right: 20px;
+      border: 1px solid black;
+      border-bottom: 0;
+
+      & li {
+        /* padding: 10px 30px; */
+        border-right: 1px solid black;
+        width: 140px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: 0.2s ease all;
+
+        &:hover {
+          background-color: dodgerblue;
+          & a {
+            color: white;
+          }
+        }
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+  & nav {
+    display: flex;
+    width: 100vw;
+    min-width: 1340px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    transition: 0.2s all ease;
+    z-index: 2;
+
+    &.on {
+      height: 160px;
+      border: 1px solid black;
+    }
+    & dl {
+      width: 140px;
+      text-align: center;
+
+      &:last-child {
+        margin-right: calc(50% - 648px);
+      }
+      & dd,
+      & dt {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+/* B */
+#slide {
+  width: 100%;
+  min-width: 1340px;
+  height: 350px;
+  background-color: #ddd;
+  border: 1px solid black;
+  /* display: flex; */
+  overflow: hidden;
+  position: relative;
+
+  & .cardList {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s all;
+
+    & .card {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    & .card img {
+      cursor: pointer;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+/* C : main > direct banner announce*/
+#main {
+  position: relative;
+  top: -100px;
+  width: 1340px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-color: aliceblue;
+
+  & .direct {
+    width: 100%;
+    height: 99px;
+    border-bottom: 1px dotted black;
+
+    & menu {
+      display: flex;
+      height: 100%;
+    }
+    & menu li {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.2s ease all;
+      &:hover {
+        background-color: dodgerblue;
+        & a {
+          transition: 0.2s ease all;
+          color: white;
+        }
+        & .preview {
+          transition: 0.2s ease all;
+          border-color: white;
+        }
+      }
+      & .preview {
+        width: 50px;
+        height: 40px;
+        border: 3px solid black;
+        margin-right: 10px;
+      }
+    }
+  }
+  & .banner {
+    width: 100%;
+    height: 140px;
+    border-bottom: 1px dotted black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & article {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      & figure {
+        width: 60px;
+        height: 50px;
+        border: 3px solid black;
+        margin-right: 20px;
+      }
+      & figcaption {
+        width: 90%;
+      }
+    }
+    & .go {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.2s all ease;
+      border-radius: 50px;
+      &:hover {
+        background-color: #000;
+        & .btn {
+          border-color: white;
+        }
+      }
+      & .btn {
+        width: 60px;
+        height: 60px;
+        border: 10px solid black;
+        border-bottom: 0;
+        border-left: 0;
+        border-radius: 10px;
+        transform: rotate(45deg);
+        margin-left: 10px;
+      }
+    }
+  }
+  & .announce {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+    & section {
+      width: 45%;
+      height: 100%;
+      & h3 {
+        width: fit-content;
+        position: relative;
+        background-color: aliceblue;
+        top: 1px;
+        left: 10px;
+        padding: 5px;
+        border: 1px solid black;
+        border-bottom: 0;
+      }
+      &.info {
+        & menu {
+          border: 1px solid black;
+          height: 180px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & li {
+            height: 1.6em;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid black;
+            & a {
+              display: inline-block;
+              width: 70%;
+              text-wrap: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            & p {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      &.gallery {
+        & h3 {
+          border-bottom: 1px solid black;
+          background-color: lightgray;
+        }
+        & menu {
+          border: 1px solid black;
+          height: 180px;
+          padding: 10px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          & li {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          & li .img {
+            width: 160px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+          }
+          & li .title {
+            width: 150px;
+            overflow: hidden;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            font-size: 0.8em;
+            border-bottom: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* D : footer*/
+#footer {
+  width: 1340px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: aliceblue;
+  margin: 0 auto;
+  position: relative;
+  top: -101px;
+  display: flex;
+
+  & .logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    border-right: 1px dotted black;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+  & .copyRight {
+    width: 100%;
+    height: 100%;
+    border-right: 1px dotted black;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & .company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    width: 250px;
+    height: 100%;
+  }
+}
+
+/* Modal */
+#modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease all;
+  z-index: -1;
+  opacity: 0;
+
+  &.active {
+    z-index: 3;
+    opacity: 100;
+  }
+  & .popup {
+    width: 800px;
+    height: 600px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    position: relative;
+
+    & .title {
+      width: 100%;
+      font-size: 2em;
+      padding: 0 10px;
+      border-bottom: 1px solid black;
+    }
+    & .content {
+      width: 100%;
+      padding: 10px;
+      line-height: 40px;
+    }
+    & .exit {
+      position: absolute;
+      cursor: pointer;
+      bottom: 10px;
+      right: 10px;
+      width: fit-content;
+      padding: 5px 10px;
+      display: flex;
+      border: 1px solid black;
+      border-radius: 5px;
+      transition: 0.1s ease;
+      &:hover {
+        background-color: #000;
+        color: aliceblue;
+      }
+    }
+  }
+}
