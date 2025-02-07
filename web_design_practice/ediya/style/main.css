@@ -8,11 +8,17 @@
 #main .slide {
   width: 100%;
   height: 620px;
+  overflow: hidden;
+  display: flex;
 
   & img {
-    width: 100%;
+    width: 0;
     height: 100%;
     object-fit: cover;
+    transition: 0.4s ease;
+    &.on {
+      width: 100%;
+    }
   }
 }
 

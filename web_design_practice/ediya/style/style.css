@@ -8,6 +8,7 @@ body {
   min-width: 1080px;
   height: 100vh;
   background-color: lightgrey;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
