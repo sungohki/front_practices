@@ -1,0 +1,9 @@
+#header {
+  & > .title {
+    width: fit-content;
+  }
+  & > .title > .underLine {
+    border-bottom: 2px dashed black;
+    margin-top: 10px;
+  }
+}
