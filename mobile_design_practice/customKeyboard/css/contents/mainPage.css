@@ -1,0 +1,119 @@
+/* Main */
+#main {
+  width: 100%;
+  height: 730px;
+  overflow-y: scroll;
+}
+
+#main > section {
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 10px 0;
+  & .title {
+    height: 30px;
+    color: hsl(210, 100%, 55%);
+    font-size: 1.1em;
+    font-weight: 800;
+    /* font-style: italic; */
+  }
+}
+
+#main > .slide {
+  width: 100%;
+  height: 250px;
+  background: url('https://cdn.pixabay.com/photo/2015/07/21/22/47/keyboard-854530_1280.jpg')
+    center/cover no-repeat;
+  box-shadow: 0 2px 4px grey;
+  margin-top: 0px;
+}
+
+#main > .store {
+  width: 100%;
+  height: 100px;
+
+  & dl {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+  }
+  & dt,
+  & dd {
+    margin: 0 15px;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: lightblue;
+    box-sizing: border-box;
+    border: 5px solid white;
+    box-shadow: 0 4px 4px lightgrey, 4px 0 4px lightgrey;
+    transition: 0.2s ease all;
+    cursor: pointer;
+    &:hover {
+      background-color: dodgerblue;
+      transform: scale(110%);
+    }
+  }
+}
+
+#main > .news {
+  width: 100%;
+  height: 250px;
+  & > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    & > p:last-child {
+      padding: 4px 6px;
+      border-radius: 50px;
+      font-size: 0.8em;
+      font-weight: 600;
+      transition: 0.2s ease;
+      &:hover {
+        background-color: #c6e3ff;
+      }
+    }
+  }
+  & > .newsList {
+    & > dt,
+    & > dd {
+      width: 100%;
+      height: 43px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px dashed grey;
+      transition: 0.2s ease;
+      cursor: pointer;
+      & > p:last-child {
+        font-size: 0.8em;
+        color: grey;
+      }
+      &:hover {
+        background-color: #c6e3ff;
+      }
+    }
+  }
+}
+
+#main > .reviews {
+  width: 100%;
+  height: 250px;
+
+  & > menu {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    overflow-x: scroll;
+    & > li {
+      min-width: 180px;
+      height: 120px;
+      background-color: #c6e3ff;
+      border-radius: 5px;
+      margin: 10px;
+    }
+  }
+}
