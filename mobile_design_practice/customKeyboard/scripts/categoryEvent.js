@@ -11,19 +11,25 @@ homeBtn.addEventListener('click', function () {
   if (!checkCurrentPage(this)) window.open('../index.html', '_self');
 });
 switchBtn.addEventListener('click', function () {
-  if (!checkCurrentPage(this)) window.open('../pages/switchList.html', '_self');
+  if (checkCurrentPage(homeBtn))
+    window.open('./pages/switchList.html', '_self');
+  else if (!checkCurrentPage(this)) window.open('./switchList.html', '_self');
 });
 housingBtn.addEventListener('click', function () {
-  if (!checkCurrentPage(this))
-    window.open('../pages/housingList.html', '_self');
+  if (checkCurrentPage(homeBtn))
+    window.open('./pages/housingList.html', '_self');
+  else if (!checkCurrentPage(this)) window.open('./housingList.html', '_self');
 });
 estimateBtn.addEventListener('click', function () {
-  if (!checkCurrentPage(this))
-    window.open('../pages/estimatePage.html', '_self');
+  if (checkCurrentPage(homeBtn))
+    window.open('./pages/estimatePage.html', '_self');
+  else if (!checkCurrentPage(this)) window.open('./estimatePage.html', '_self');
 });
 profileBtn.addEventListener('click', function () {
-  if (!checkCurrentPage(this))
-    window.open('../pages/profilePage.html', '_self');
+  console.log(checkCurrentPage(homeBtn));
+  if (checkCurrentPage(homeBtn))
+    window.open('./pages/profilePage.html', '_self');
+  else if (!checkCurrentPage(this)) window.open('./profilePage.html', '_self');
 });
 
 // Functions
