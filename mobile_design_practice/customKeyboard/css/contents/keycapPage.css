@@ -1,0 +1,157 @@
+/* Main */
+#main {
+  width: 100%;
+  height: 730px;
+  overflow-y: scroll;
+}
+#main > form > .textZone {
+  width: 90%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+
+  & > input[type='text'] {
+    width: calc(100% - 50px);
+    position: absolute;
+    left: 0;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    background-color: rgba(30, 144, 255, 0.1);
+    transition: 0.2s ease;
+    &:hover {
+      background-color: rgba(30, 144, 255, 0.2);
+    }
+    border-radius: 10px 0 0 10px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    color: dodgerblue;
+    font-size: 1em;
+    &::placeholder {
+      color: rgba(30, 144, 255, 0.6);
+      font-size: 1em;
+      font-weight: 600;
+    }
+    & + div {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: dodgerblue;
+      position: absolute;
+      right: 0px;
+      border-radius: 0 10px 10px 0;
+
+      & > svg {
+        fill: white;
+        width: 20px;
+        height: 20px;
+        transition: 0.2s ease;
+        &:hover {
+          transform: scale(120%);
+        }
+      }
+    }
+  }
+}
+
+#main > form > .selectZone {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 70px;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  overflow-x: scroll;
+
+  & > select {
+    box-sizing: border-box;
+    width: fit-content;
+    min-width: 78px;
+    height: 40px;
+    margin: 0 5px;
+    border: 0;
+    border-radius: 50px;
+    text-align: center;
+    background-color: rgba(30, 144, 255, 0.1);
+    transition: 0.2s ease;
+    &:hover {
+      background-color: rgba(30, 144, 255, 0.2);
+    }
+    color: dodgerblue;
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+#main > .list {
+  width: 100%;
+  background-color: #c6e3ff;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  & > menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > li {
+      width: 350px;
+      height: 200px;
+      margin: 10px 0;
+      background-color: aliceblue;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 4px rgba(30, 144, 255, 0.4),
+        4px 0 2px rgba(30, 144, 255, 0.4);
+      transition: 0.2s ease;
+      &:hover {
+        transform: scale(105%);
+      }
+      & > .image {
+        width: 150px;
+        height: 150px;
+        background: url('../../images/gmk_wob.png') center/cover no-repeat;
+        border-radius: 10px;
+      }
+      & > .info {
+        width: 150px;
+        height: 150px;
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: dodgerblue;
+        & > .name {
+          font-size: 1.2em;
+          font-weight: 800;
+        }
+        & > .tags {
+          display: flex;
+          flex-wrap: wrap;
+          overflow-y: scroll;
+        }
+        & > .tags > li {
+          width: fit-content;
+          height: fit-content;
+          white-space: nowrap;
+          font-size: 0.8em;
+          padding: 4px 8px;
+          margin: 4px;
+          background-color: #c6e3ff;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}

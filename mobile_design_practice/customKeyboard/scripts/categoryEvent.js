@@ -2,7 +2,7 @@
 const homeBtn = document.querySelector('#footer .category:nth-child(1)');
 const switchBtn = document.querySelector('#footer .category:nth-child(2)');
 const housingBtn = document.querySelector('#footer .category:nth-child(3)');
-const estimateBtn = document.querySelector('#footer .category:nth-child(4)');
+const keycapBtn = document.querySelector('#footer .category:nth-child(4)');
 const profileBtn = document.querySelector('#footer .category:nth-child(5)');
 const host = window.location.host;
 
@@ -20,10 +20,10 @@ housingBtn.addEventListener('click', function () {
     window.open('./pages/housingList.html', '_self');
   else if (!checkCurrentPage(this)) window.open('./housingList.html', '_self');
 });
-estimateBtn.addEventListener('click', function () {
+keycapBtn.addEventListener('click', function () {
   if (checkCurrentPage(homeBtn))
-    window.open('./pages/estimatePage.html', '_self');
-  else if (!checkCurrentPage(this)) window.open('./estimatePage.html', '_self');
+    window.open('./pages/keycapPage.html', '_self');
+  else if (!checkCurrentPage(this)) window.open('./keycapPage.html', '_self');
 });
 profileBtn.addEventListener('click', function () {
   console.log(checkCurrentPage(homeBtn));
