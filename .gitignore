@@ -2,6 +2,7 @@
 */test
 test/*
 doit/*
+.vscode
 
 # Logs
 logs
