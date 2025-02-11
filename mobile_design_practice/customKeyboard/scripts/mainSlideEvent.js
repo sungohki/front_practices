@@ -1,6 +1,7 @@
 // Elements
 const mainSlide = document.querySelector('section.slide');
 const mainSlideScreen = document.querySelector('section.slide > .screen');
+mainSlideScreen.style.left = '0%';
 const mainSlideDots = document.querySelectorAll('section.slide > .dots > div');
 
 // Events
