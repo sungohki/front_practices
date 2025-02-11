@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/contents/switchPage.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/contents/switchPage.css" />
   </head>
 
   <body>
@@ -142,14 +142,6 @@
         <div class="category">프로필</div>
       </footer>
     </div>
-    <script>
-      const homeCategory = document.querySelector(
-        '#footer .category:nth-child(1)'
-      );
-
-      homeCategory.addEventListener('click', () => {
-        window.open('./index.html', '_self');
-      });
-    </script>
+    <script src="../scripts/categoryEvent.js"></script>
   </body>
 </html>
