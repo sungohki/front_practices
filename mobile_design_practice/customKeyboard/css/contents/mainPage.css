@@ -21,10 +21,64 @@
 #main > .slide {
   width: 100%;
   height: 250px;
-  background: url('https://cdn.pixabay.com/photo/2015/07/21/22/47/keyboard-854530_1280.jpg')
-    center/cover no-repeat;
+  padding: 0;
   box-shadow: 0 2px 4px grey;
   margin-top: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  & > .screen {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    transition: 1s ease;
+  }
+  & > .screen > div {
+    width: calc(100% / 3);
+    height: 100%;
+    cursor: pointer;
+    &:nth-child(1) {
+      background: url('https://cdn.pixabay.com/photo/2015/07/21/22/47/keyboard-854530_1280.jpg')
+        center/cover no-repeat;
+    }
+    &:nth-child(2) {
+      background: url('https://cdn.pixabay.com/photo/2024/04/17/01/59/mechanical-keyboard-8701176_1280.png')
+        center/cover no-repeat;
+    }
+    &:nth-child(3) {
+      background: url('https://cdn.pixabay.com/photo/2015/02/03/02/14/keyboard-621830_960_720.jpg')
+        center/cover no-repeat;
+    }
+  }
+  & > .dots {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+    & > div {
+      margin: 4px;
+      width: 10px;
+      height: 10px;
+      background-color: dodgerblue;
+      /* border: 2px aliceblue solid; */
+      opacity: 0.4;
+      border-radius: 20px;
+      transition: 1s ease;
+      cursor: pointer;
+      &.on {
+        opacity: 0.8;
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 
 #main > .store {
@@ -51,9 +105,16 @@
     box-shadow: 0 4px 4px lightgrey, 4px 0 4px lightgrey;
     transition: 0.2s ease all;
     cursor: pointer;
+    overflow: hidden;
     &:hover {
       background-color: dodgerblue;
       transform: scale(110%);
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
