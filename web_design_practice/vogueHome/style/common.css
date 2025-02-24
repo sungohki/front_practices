@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  height: 100%;
+}
+a,
+a:visited,
+a:link {
+  color: #333;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+:root {
+  --bg-one: #333;
+  --bg-two: grey;
+  --bg-three: lightgrey;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}

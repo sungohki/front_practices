@@ -1,0 +1,106 @@
+/* Floating */
+#floating {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  fill: white;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.4s all;
+  opacity: 1;
+  overflow: hidden;
+
+  &:hover {
+    fill: var(--bg-one);
+  }
+  & > svg {
+    width: 100%;
+    height: 100%;
+  }
+  &.on {
+    fill: var(--bg-one);
+    opacity: 0.2;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/* Header */
+#header {
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+  transform: perspective(250px) rotateY(90deg);
+
+  &.flip {
+    animation: appear 0.4s ease 0.4s forwards;
+  }
+  &.toggle {
+    animation: toggled 0.4s ease 0.4s forwards;
+  }
+
+  /* Header > .logo */
+  & > .logo {
+    width: 80%;
+    margin-top: 80px;
+    margin-bottom: 160px;
+    & > img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  /* Header > .logo */
+  & > menu {
+    width: 100%;
+
+    & > li {
+      width: 100%;
+      padding: 10px 0;
+      text-transform: capitalize;
+      text-align: center;
+      transition: 0.4s all;
+
+      & > a,
+      & > a:visited {
+        font-size: 1.4em;
+        transition: 0.4s all;
+      }
+      &:hover {
+        background-color: var(--bg-three);
+        & > a,
+        & > a:visited {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    transform-origin: left;
+    transform: perspective(250px) rotateY(90deg);
+  }
+  to {
+    transform-origin: left;
+    transform: perspective(250px) rotateY(5deg);
+  }
+}
+@keyframes toggled {
+  from {
+    transform-origin: left;
+    transform: perspective(250px) rotateY(5deg);
+  }
+  to {
+    transform-origin: left;
+    transform: perspective(250px) rotateY(0deg);
+  }
+}
