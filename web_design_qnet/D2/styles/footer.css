@@ -8,13 +8,21 @@
 }
 #footer > .logo {
   width: 202px;
-  background: url('../images/logo.png') center/contain no-repeat;
   border-right: 2px dotted var(--main-background);
-  filter: grayscale(100%);
   & > a {
     width: 100%;
     height: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > svg {
+      fill: var(--main-background);
+      height: 80%;
+      transition: 0.2s ease fill;
+    }
+    & > svg:hover {
+      fill: var(--main-theme);
+    }
   }
 }
 #footer > .copyRight {
@@ -35,24 +43,23 @@
   & > menu {
     width: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
   }
   & > menu > li {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    text-align: center;
+    transition: 0.2s background-color ease;
+    padding: 2px 0;
+
+    &:hover {
+      background-color: var(--main-theme);
+    }
   }
   & > menu > li > a {
     width: 100%;
-    height: 100%;
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: 0.2s filter ease;
-      &:hover {
-        filter: brightness(150%);
-      }
-    }
+    color: var(--main-background);
+    /* height: 100%; */
   }
 }
