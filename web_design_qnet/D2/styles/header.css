@@ -1,6 +1,7 @@
 /* Header */
 #header {
   width: 200px;
+  height: 650px;
   background-color: var(--main-theme);
   display: flex;
   flex-direction: column;
