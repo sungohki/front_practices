@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -18,9 +19,18 @@ a:visited {
   text-decoration: none;
   color: #333;
 }
+:root {
+  --main-theme: skyblue;
+  --main-background: aliceblue;
+  --main-theme-bright: lightblue;
+  --main-highlight: dodgerblue;
+}
 
 #wrap {
   width: 100%;
-  height: 100%;
+  height: 750px;
+  /* height: 100%; */
   background-color: aliceblue;
+
+  display: flex;
 }
