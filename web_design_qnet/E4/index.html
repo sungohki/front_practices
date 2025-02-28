@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <script src="./scripts/slideShow.js" defer></script>
   </head>
 
   <body>
     <div id="wrapper">
+      <!-- Header -->
       <header id="header">
+        <!-- Logo -->
         <div class="logo">
           <a href="#"><img src="./images/logo.svg" alt="logo" /></a>
         </div>
+
+        <!-- Menu -->
         <menu class="menu">
           <li>
             <div class="title">철길 마을</div>
@@ -64,7 +69,114 @@
           </li>
         </menu>
       </header>
-      <main id="main"></main>
+
+      <!-- Main -->
+      <main id="main">
+        <!-- Contents -->
+        <section class="contents">
+          <section class="banner">
+            <div class="preview"></div>
+            <div class="describe">
+              <h3>올해의 별빛 축제</h3>
+              <p>올해 별빛 축제에 많은 참여를 바랍니다.</p>
+            </div>
+            <div class="move">
+              <a href="#"></a>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+                />
+              </svg>
+            </div>
+          </section>
+          <section class="notice">
+            <div class="info">
+              <div class="title">
+                <div class="border"></div>
+                <p>공지사항</p>
+              </div>
+              <menu class="list">
+                <li>
+                  <a href="#"><span>공지사항1</span><span>2024.03.01</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>공지사항2</span><span>2024.03.01</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>공지사항3</span><span>2024.03.01</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>공지사항4</span><span>2024.03.01</span></a>
+                </li>
+              </menu>
+            </div>
+            <div class="gallery">
+              <div class="title">
+                <div class="border"></div>
+                <p>갤러리</p>
+              </div>
+              <menu class="list">
+                <li class="card">
+                  <a href="#"></a>
+                  <div class="preview">
+                    <img src="./images/gallery1.jpg" alt="gallery1" />
+                  </div>
+                  <p class="title">갤러리1</p>
+                </li>
+                <li class="card">
+                  <a href="#"></a>
+                  <div class="preview">
+                    <img src="./images/gallery2.jpg" alt="gallery2" />
+                  </div>
+                  <p class="title">갤러리2</p>
+                </li>
+              </menu>
+            </div>
+          </section>
+          <section class="direct">
+            <menu class="list">
+              <li class="card">
+                <div class="preview">
+                  <img src="./images/shortcut1.jpg" alt="shortcut1" />
+                </div>
+                <p class="name">링크1</p>
+              </li>
+              <li class="card">
+                <div class="preview">
+                  <img src="./images/shortcut2.jpg" alt="shortcut2" />
+                </div>
+                <p class="name">링크2</p>
+              </li>
+              <li class="card">
+                <div class="preview">
+                  <img src="./images/shortcut3.jpg" alt="shortcut3" />
+                </div>
+                <p class="name">링크3</p>
+              </li>
+            </menu>
+          </section>
+        </section>
+
+        <!-- Slide -->
+        <section class="slide">
+          <menu class="list">
+            <li>
+              <img src="./images/img1.jpg" alt="" />
+              <div class="message">올해 별빛 축제에 많은 참여를 바랍니다.</div>
+            </li>
+            <li>
+              <img src="./images/img2.jpg" alt="" />
+              <div class="message">올해 별빛 축제에 많은 참여를 바랍니다.</div>
+            </li>
+            <li>
+              <img src="./images/img3.jpg" alt="" />
+              <div class="message">올해 별빛 축제에 많은 참여를 바랍니다.</div>
+            </li>
+          </menu>
+        </section>
+      </main>
+
+      <!-- Footer -->
       <footer id="footer"></footer>
     </div>
   </body>
