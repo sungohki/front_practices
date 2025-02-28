@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
     <script src="./scripts/slideShow.js" defer></script>
+    <script src="./scripts/modalPopup.js" defer></script>
   </head>
 
   <body>
@@ -161,14 +163,17 @@
         <section class="slide">
           <menu class="list">
             <li>
+              <a href="#"></a>
               <img src="./images/img1.jpg" alt="" />
               <div class="message">올해 별빛 축제에 많은 참여를 바랍니다.</div>
             </li>
             <li>
+              <a href="#"></a>
               <img src="./images/img2.jpg" alt="" />
               <div class="message">올해 별빛 축제에 많은 참여를 바랍니다.</div>
             </li>
             <li>
+              <a href="#"></a>
               <img src="./images/img3.jpg" alt="" />
               <div class="message">올해 별빛 축제에 많은 참여를 바랍니다.</div>
             </li>
@@ -177,7 +182,67 @@
       </main>
 
       <!-- Footer -->
-      <footer id="footer"></footer>
+      <footer id="footer">
+        <section class="logo">
+          <a href="#"><img src="./images/logo.svg" alt="logo" /></a>
+        </section>
+        <section class="addtional">
+          <section class="menu">
+            <menu class="list">
+              <li><a href="#">footermenu1</a></li>
+              <li><a href="#">footermenu2</a></li>
+              <li><a href="#">footermenu3</a></li>
+              <li><a href="#">footermenu4</a></li>
+              <li><a href="#">footermenu5</a></li>
+              <li><a href="#">footermenu6</a></li>
+            </menu>
+          </section>
+          <section class="copyRight">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam a
+            minima mollitia nisi aliquam exercitationem provident quisquam quis
+            enim quam.
+          </section>
+        </section>
+        <section class="familySite">
+          <menu class="list">
+            <li><a href="#">family site 1</a></li>
+            <li><a href="#">family site 2</a></li>
+            <li><a href="#">family site 3</a></li>
+            <li><a href="#">family site 4</a></li>
+          </menu>
+        </section>
+      </footer>
+
+      <!-- popup -->
+      <section id="modal">
+        <div class="popup">
+          <div class="title">
+            <p>Lorem, ipsum.</p>
+          </div>
+          <div class="context">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus cum
+              nobis deleniti explicabo numquam, vitae praesentium quas omnis
+              officiis eligendi eos, corrupti incidunt assumenda! Cupiditate
+              delectus debitis consequuntur esse quaerat iste provident. Quasi,
+              earum eum? Nostrum laborum architecto tempora quisquam eos itaque
+              veniam sit, pariatur molestias laboriosam. Doloribus animi tenetur
+              alias, quibusdam expedita id modi. Adipisci dolorem fuga aperiam
+              repellendus?
+            </p>
+          </div>
+          <div class="quit">
+            <div class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+              </svg>
+              <span>닫기</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
