@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -15,9 +16,13 @@ a:link {
   text-decoration: none;
   color: #333;
 }
+li {
+  list-style: none;
+}
 :root {
-  --main-color: dodgerblue;
-  --sub-color: lightblue;
+  --main-color: #999;
+  --sub-color: #666;
+  --highlight-color: #000;
   --background-color: #fff;
   --text-color: #333;
 }
