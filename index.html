@@ -330,7 +330,7 @@
                   </div>
                   <div class="content">
                     <p>address</p>
-                    <p>Gangseo-gu, Seoul, Republic of Korea</p>
+                    <p>서울시 강서구 (5호선 발산역 인근 거주)</p>
                   </div>
                 </li>
               </menu>
@@ -342,7 +342,13 @@
               >
                 <label>
                   <p>name</p>
-                  <input type="text" name="name" class="sender_name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    class="sender_name"
+                    placeholder="이름을 입력해주세요."
+                    required
+                  />
                 </label>
                 <label>
                   <p>
@@ -356,6 +362,7 @@
                     type="text"
                     name="email"
                     class="sender_email"
+                    placeholder="회신할 이메일을 입력해주세요."
                     required
                   />
                 </label>
@@ -364,10 +371,11 @@
                   <textarea
                     name="message"
                     class="sender_message"
+                    placeholder="전송할 내용을 입력해주세요."
                     required
                   ></textarea>
                 </label>
-                <button class="send_btn">send</button>
+                <button class="send_btn">📩 send</button>
               </form>
               <iframe
                 id="iframe1"
