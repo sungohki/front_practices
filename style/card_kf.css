@@ -1,0 +1,28 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardFlip {
+  0% {
+    transform: perspective(500px) translate(-300px, 100px) rotateX(90deg)
+      rotateY(80deg);
+  }
+  100% {
+    transform: perspective(500px) translate(0px, 0px) rotateX(0deg)
+      rotateY(0deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: perspective(500px) rotateX(90deg);
+  }
+  100% {
+    transform: perspective(500px) rotateX(0deg);
+  }
+}

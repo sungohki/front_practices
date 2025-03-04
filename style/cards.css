@@ -1,24 +1,54 @@
+@import url('./card_kf.css');
+
 #main > .menu > li > .card {
   /* Info */
   & > .info {
     display: flex;
-    /* height: 250px; */
+    width: 100%;
+    height: 400px;
+    /* justify-content: space-between; */
 
-    & > .my_img {
+    & > .profile_img {
       width: 40%;
-      /* height: 100%; */
-      background: url('../images/me_alone.jpg') center/cover no-repeat;
-      margin-right: 20px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > .guide {
+        /* width: 50%; */
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        box-shadow: 1px 2px 4px grey;
+        transform: rotateX(90deg) rotateY(80deg) perspective(500px);
+        opacity: 0;
+        & > img {
+          width: 90%;
+          height: 90%;
+          object-fit: contain;
+          border-radius: 5px;
+        }
+        &.on {
+          animation: 1s cardFlip forwards, 1s appear forwards;
+        }
+      }
     }
     & > .introduce {
-      width: 40%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
+      & strong {
+        color: var(--emphasized-color);
+      }
       & > .title {
         text-transform: capitalize;
         font-size: 2em;
-        & > span {
-          color: var(--emphasized-color);
-        }
+        font-weight: 700;
       }
       & > .content {
         & > p {
@@ -27,9 +57,6 @@
           font-size: 1.2em;
           &:first-child {
             text-transform: capitalize;
-          }
-          & > span {
-            color: var(--emphasized-color);
           }
         }
         & > .social {
@@ -68,21 +95,27 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    & > li.item {
-      width: 30%;
+    & > .item {
+      width: 22%;
       height: 300px;
       background-color: white;
-      padding: 30px 20px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 1px 2px 6px grey;
+      margin-bottom: 60px;
+      opacity: 0;
+      transform-origin: top;
 
       & > .icon {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+
+        & > img,
         & > svg {
           fill: var(--emphasized-color);
-          width: 30px;
-          height: 30px;
+          width: 40px;
+          height: 40px;
         }
       }
       & > .stack_name {
@@ -91,7 +124,17 @@
         font-weight: 800;
       }
       & > .stack_describe {
-        font-weight: 600;
+        & > menu {
+          & > li {
+            margin: 5px 0;
+            font-weight: 500;
+            font-size: 1.1em;
+            &::before {
+              content: '📌';
+              margin-right: 5px;
+            }
+          }
+        }
       }
     }
   }
@@ -105,28 +148,38 @@
 
     & > .item {
       width: 400px;
-      /* height: 400px; */
+      height: 300px;
       border: 1px lightgrey solid;
       padding: 10px;
       margin-bottom: 60px;
       box-shadow: 2px 1px 4px grey;
       transform: scale(1);
-      transition: 0.2s transform;
+      transition: 0.2s transform ease, 0.2s box-shadow ease;
       cursor: pointer;
+      position: relative;
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
+        box-shadow: 4px 2px 6px grey;
       }
 
+      & > a {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+        position: absolute;
+      }
       & > .project_preview {
         width: 100%;
         height: 75%;
-        background-color: grey;
         margin-bottom: 5px;
         & > img {
           width: 100%;
           height: 100%;
           object-position: center;
+          border-radius: 5px;
         }
       }
       & > .project_subject {
@@ -168,6 +221,9 @@
           font-size: 1.3em;
           font-weight: 800;
         }
+        & > p:first-child {
+          text-transform: capitalize;
+        }
         & > p:last-child {
           font-weight: 600;
         }
@@ -190,7 +246,8 @@
           outline: none;
           border-radius: 5px;
           padding: 10px 10px;
-          font-size: 1em;
+          font-size: 1.2em;
+          font-family: 'Noto Sans KR', serif;
           transition: 0.2s outline ease;
           outline: 1px solid transparent;
 

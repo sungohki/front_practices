@@ -23,11 +23,14 @@
 
       & > .card {
         width: 80%;
-        margin: 20px auto;
+        margin: 50px auto;
+        font-family: 'Noto Sans KR', serif;
 
         /* .card > .title */
         & > .title {
           margin-bottom: 30px;
+          font-family: 'BMJUA', serif;
+
           & > p:first-child {
             color: var(--emphasized-color);
             font-size: 1.2em;
