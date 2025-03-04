@@ -2,49 +2,46 @@
 #main {
   width: 100%;
 
+  display: flex;
+  flex-direction: column;
   /* main > .menu */
-  & > .menu {
+
+  /* .menu > .card */
+  & > .box {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    min-height: 400px;
+    background-color: white;
+    &:nth-child(even) {
+      background-color: rgb(245, 245, 245);
+    }
 
-    /* .menu > .card */
-    & > li {
-      width: 100%;
-      min-height: 400px;
-      background-color: white;
-      &:nth-child(even) {
-        background-color: rgb(245, 245, 245);
-      }
+    &:nth-child(3) {
+      margin-top: 500px;
+    }
 
-      &:nth-child(3) {
-        margin-top: 500px;
-      }
+    & > .card {
+      width: 80%;
+      margin: 50px auto;
+      font-family: 'Noto Sans KR', serif;
 
-      & > .card {
-        width: 80%;
-        margin: 50px auto;
-        font-family: 'Noto Sans KR', serif;
+      /* .card > .title */
+      & > .title {
+        margin-bottom: 30px;
+        font-family: 'BMJUA', serif;
 
-        /* .card > .title */
-        & > .title {
-          margin-bottom: 30px;
-          font-family: 'BMJUA', serif;
-
-          & > p:first-child {
-            color: var(--emphasized-color);
-            font-size: 1.2em;
-            text-transform: capitalize;
-          }
-          & > p:last-child {
-            font-size: 2.6em;
-            text-transform: capitalize;
-          }
+        & > p:first-child {
+          color: var(--emphasized-color);
+          font-size: 1.2em;
+          text-transform: capitalize;
         }
-        /* .card > .content */
-        & > .content {
-          width: 100%;
+        & > p:last-child {
+          font-size: 2.6em;
+          text-transform: capitalize;
         }
+      }
+      /* .card > .content */
+      & > .content {
+        width: 100%;
       }
     }
   }

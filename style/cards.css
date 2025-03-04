@@ -1,6 +1,6 @@
 @import url('./card_kf.css');
 
-#main > .menu > li > .card {
+#main > .box > .card {
   /* Info */
   & > .info {
     display: flex;
