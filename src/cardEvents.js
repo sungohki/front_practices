@@ -9,7 +9,6 @@ window.addEventListener('scroll', () => {
   if (aboutSection.getBoundingClientRect().y < 400) {
     aboutCard.classList.add('on');
   }
-  console.log(featureSection.getBoundingClientRect().y);
   if (featureSection.getBoundingClientRect().y < 800) {
     featureCards.forEach((item, index) => {
       item.style.animation = `.4s swing .${index}s forwards, .4s appear .${index}s forwards`;
