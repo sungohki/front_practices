@@ -1,0 +1,221 @@
+/* Main Section */
+#main {
+  width: 1340px;
+  height: 550px;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -100px;
+}
+
+/* Direct Section */
+#main > .direct {
+  width: 100%;
+  height: 100px;
+
+  & > .list {
+    display: flex;
+    height: 100%;
+  }
+  & > .list > .item {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    transition: 0.4s background-color ease;
+    &:hover {
+      background-color: var(--main-color-light);
+    }
+    & > a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+/* Banner Section */
+#main > .banner {
+  width: 100%;
+  height: 200px;
+  background: url('../Contents/배너\ 이미지/banner.jpg');
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  & > .phrase {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color);
+    gap: 10px;
+  }
+}
+
+/* Gallery Section */
+#main > .notice {
+  width: 100%;
+  height: 250px;
+
+  & > .category {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .center {
+      width: 90%;
+      height: 90%;
+
+      & > .title {
+        position: relative;
+        bottom: -1px;
+        width: fit-content;
+        height: 15%;
+        display: flex;
+        border: 1px solid var(--main-color-deep);
+        border-bottom: 0px;
+        background-color: var(--bg-color);
+        cursor: pointer;
+
+        & > p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 10px;
+          &:not(.on) {
+            background-color: var(--main-color-light);
+          }
+        }
+      }
+      & > menu:not(.on) {
+        display: none;
+      }
+      & > .infoList {
+        width: 100%;
+        height: 70%;
+        border: 1px solid var(--main-color-deep);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+        & > li.item {
+          flex: 1;
+          width: 100%;
+          display: flex;
+          position: relative;
+          justify-content: space-between;
+          align-items: center;
+          transition: 0.4s all ease;
+          padding: 0 10px;
+
+          &:hover {
+            background-color: var(--main-color-deep);
+            color: var(--bg-color);
+          }
+          &:nth-child(2n) {
+            background-color: var(--main-color-light);
+            &:hover {
+              color: var(--bg-color);
+              background-color: var(--main-color-deep);
+            }
+          }
+          & > a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+            transition: 0.4s color ease;
+          }
+          & > .title {
+            width: 70%;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+            overflow: hidden;
+          }
+          /* & > .date {} */
+        }
+      }
+      & > .galleryList {
+        width: 100%;
+        height: 70%;
+        border: 1px solid var(--main-color-deep);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & > .item {
+          flex: 1;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          background-color: var(--bg-color);
+          &:nth-child(2n) {
+            background-color: var(--main-color-light);
+          }
+          transition: 0.4s all ease;
+
+          &:hover,
+          &:hover:nth-child(2n) {
+            background-color: var(--main-color);
+            color: var(--bg-color);
+          }
+
+          & > a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+          }
+          & > .preview {
+            width: 100%;
+            height: 70%;
+            margin-top: 10px;
+            & > img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          & > .title {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

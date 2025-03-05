@@ -1,0 +1,79 @@
+/* Modal Section */
+#modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s opacity ease;
+
+  &.on {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+/* Window Section */
+#modal > .window {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background-color: var(--bg-color);
+  position: relative;
+
+  & > .header {
+    height: 10%;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding-left: 20px;
+  }
+
+  & > .main {
+    height: calc(90% - 60px);
+    padding: 0 20px;
+    padding: 20px;
+    line-height: 2em;
+    font-size: 1.2em;
+  }
+
+  & > .footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    & > .exit {
+      cursor: pointer;
+      margin-right: 20px;
+      font-size: 1.2em;
+      display: flex;
+      padding: 5px 10px;
+      justify-content: space-around;
+      align-items: center;
+      border: 0px;
+      background-color: var(--main-color-light);
+      transition: 0.4s background-color ease, 0.6s color ease;
+
+      &:hover {
+        background-color: var(--main-color);
+        color: var(--bg-color);
+      }
+
+      & > svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
