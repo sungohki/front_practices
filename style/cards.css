@@ -1,96 +1,7 @@
 @import url('./card_kf.css');
 
-#main > .box > .card {
-  /* Info */
-  & > .info {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    /* justify-content: space-between; */
-
-    & > .profile_img {
-      width: 40%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      & > .guide {
-        /* width: 50%; */
-        height: 100%;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #eee;
-        box-shadow: 1px 2px 4px grey;
-        transform: rotateX(90deg) rotateY(80deg) perspective(500px);
-        opacity: 0;
-        & > img {
-          width: 90%;
-          height: 90%;
-          object-fit: contain;
-          border-radius: 5px;
-        }
-        &.on {
-          animation: 1s cardFlip forwards, 1s appear forwards;
-        }
-      }
-    }
-    & > .introduce {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      & strong {
-        color: var(--emphasized-color);
-      }
-      & > .title {
-        text-transform: capitalize;
-        font-size: 2em;
-        font-weight: 700;
-      }
-      & > .content {
-        & > p {
-          margin: 10px 0;
-          font-weight: 600;
-          font-size: 1.2em;
-          &:first-child {
-            text-transform: capitalize;
-          }
-        }
-        & > .social {
-          width: 100%;
-          display: flex;
-          & > li {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            position: relative;
-            & > a {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              display: block;
-            }
-            & > svg {
-              width: 100%;
-              height: 100%;
-              cursor: pointer;
-              transition: 0.2s fill ease;
-            }
-            &:hover > svg {
-              fill: var(--emphasized-color);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /* Stack */
+#main > .main_box_space > .main_box_wrap {
+  /* Features */
   & > .stack {
     width: 100%;
     display: flex;
@@ -98,7 +9,7 @@
     flex-wrap: wrap;
 
     & > .item {
-      width: 22%;
+      width: 384px;
       height: 300px;
       background-color: white;
       padding: 30px;
