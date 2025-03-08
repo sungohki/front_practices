@@ -1,5 +1,5 @@
 /* About Box */
-#main > .aboutBox {
+#main > .about_box {
   /* About Box Contents */
   & > .main_box_contents {
     display: flex;

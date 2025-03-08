@@ -52,12 +52,12 @@ a:visited {
 @media screen and (max-width: 425px) {
   html,
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 768px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 15px;
   }
 }

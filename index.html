@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -82,7 +82,7 @@
       <!-- Main Section -->
       <main id="main">
         <!-- About Box -->
-        <div class="main_box_space aboutBox">
+        <div class="main_box_space about_box">
           <!-- About Box Title -->
           <div class="main_box_title">
             <p class="sub">who am i</p>
@@ -160,15 +160,23 @@
             </div>
           </div>
         </div>
-        <div class="main_box_space featuresBox">
-          <div class="main_box_wrap">
-            <div class="main_box_title">
-              <p class="sub">features</p>
-              <p>My Stacks</p>
-            </div>
-            <menu class="stack">
-              <li class="item">
-                <div class="icon">
+
+        <!-- Features Box -->
+        <div class="main_box_space features_box">
+          <!-- Features Box Title -->
+          <div class="main_box_title">
+            <p class="sub">features</p>
+            <p>My Stacks</p>
+          </div>
+
+          <!-- Features Box Contents -->
+          <div class="main_box_contents">
+
+          <!-- Features Box Item List -->
+            <ul class="features_box_list">
+              <!-- Feature Item : HTML/CSS3/JS -->
+              <li class="features_box_item">
+                <div class="feature_icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
@@ -193,8 +201,8 @@
                     />
                   </svg>
                 </div>
-                <p class="stack_name">HTML5/CSS3/JS</p>
-                <div class="stack_describe">
+                <p class="feature_name">HTML5/CSS3/JS</p>
+                <div class="feature_describe">
                   <menu>
                     <li>웹 표준 준수</li>
                     <li>SEO 최적화</li>
@@ -202,8 +210,10 @@
                   </menu>
                 </div>
               </li>
-              <li class="item">
-                <div class="icon">
+
+              <!-- Feature Item : Node.js -->
+              <li class="features_box_item">
+                <div class="feature_icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 512"
@@ -214,8 +224,8 @@
                     />
                   </svg>
                 </div>
-                <p class="stack_name">node.js</p>
-                <div class="stack_describe">
+                <p class="feature_name">node.js</p>
+                <div class="feature_describe">
                   <menu>
                     <li>비동기 처리 (API 연동 등)</li>
                     <li>프레임워크, 라이브러리 활용</li>
@@ -223,22 +233,26 @@
                   </menu>
                 </div>
               </li>
-              <li class="item">
-                <div class="icon">
+
+              <!-- Feature Item : TypeScript -->
+              <li class="features_box_item">
+                <div class="feature_icon">
                   <img src="./images/Typescript_logo_2020.svg" alt="ts" />
                 </div>
-                <p class="stack_name">TypeScript</p>
-                <div class="stack_describe">
+                <p class="feature_name">TypeScript</p>
+                <div class="feature_describe">
                   <menu>
                     <li>정적 타입 명시</li>
                     <li>코드 안정성</li>
                     <li>객체 지향 프로그래밍</li>
-                    <li>컴파일을 통한 브라우저 호환성</li>
+                    <li>브라우저 호환성</li>
                   </menu>
                 </div>
               </li>
-              <li class="item">
-                <div class="icon">
+
+              <!-- Feature Item : Git -->
+              <li class="features_box_item">
+                <div class="feature_icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -249,8 +263,8 @@
                     />
                   </svg>
                 </div>
-                <p class="stack_name">git</p>
-                <div class="stack_describe">
+                <p class="feature_name">git</p>
+                <div class="feature_describe">
                   <menu>
                     <li>버전 관리</li>
                     <li>커밋 메시지 규칙 준수</li>
