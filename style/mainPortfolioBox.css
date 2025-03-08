@@ -1,0 +1,68 @@
+/* Portfolio Box*/
+#main > .portfolio_box {
+  & > .main_box_contents {
+    & > .portfolio_box_list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & > .portfolio_box_item {
+        width: 400px;
+        /* height: 300px; */
+        border: 1px lightgrey solid;
+        padding: 10px;
+        margin-bottom: 60px;
+        box-shadow: 2px 1px 4px grey;
+        transform: scale(1);
+        transition:
+          0.2s transform ease,
+          0.2s box-shadow ease;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 4px 2px 6px grey;
+        }
+
+        & > a {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: block;
+          position: absolute;
+        }
+        & > .portfolio_preview {
+          width: 100%;
+          height: 75%;
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+
+          & > img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 5px;
+          }
+        }
+        & > .portfolio_category {
+          color: var(--emphasized-color);
+          text-transform: uppercase;
+          font-weight: 800;
+        }
+        & > .portfolio_title {
+          text-transform: capitalize;
+          font-weight: 900;
+          font-size: 1.8rem;
+          /* margin-bottom: 10px; */
+        }
+      }
+    }
+  }
+}
