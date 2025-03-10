@@ -14,7 +14,6 @@
         /* height: 300px; */
         border: 1px lightgrey solid;
         padding: 10px;
-        margin: 0 auto;
         margin-bottom: 60px;
         box-shadow: 2px 1px 4px grey;
         transform: scale(1);
@@ -62,6 +61,21 @@
           font-weight: 900;
           font-size: 1.8rem;
           /* margin-bottom: 10px; */
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #main > .portfolio_box {
+    & > .main_box_contents {
+      & > .portfolio_box_list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        & > .portfolio_box_item {
+          margin: 0 auto;
+          margin-bottom: 60px;
         }
       }
     }
