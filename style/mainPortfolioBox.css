@@ -72,8 +72,10 @@
     & > .main_box_contents {
       & > .portfolio_box_list {
         flex-direction: column;
-        flex-wrap: nowrap;
+        /* flex-wrap: nowrap; */
         & > .portfolio_box_item {
+          max-width: 400px;
+          width: 100%;
           margin: 0 auto;
           margin-bottom: 60px;
         }
