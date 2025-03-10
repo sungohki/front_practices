@@ -8,7 +8,8 @@
       flex-wrap: wrap;
 
       & > .features_box_item {
-        width: 300px;
+        width: 400px;
+        min-width: 300px;
         height: 300px;
         background-color: white;
         padding: 30px;
@@ -40,11 +41,24 @@
               font-weight: 500;
               font-size: 1.1em;
               &::before {
-                content: "📌";
+                content: '📌';
                 margin-right: 5px;
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #main > .features_box {
+    & > .main_box_contents {
+      & > .features_box_list {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        & > .features_box_item {
+          margin-right: 40px;
         }
       }
     }
