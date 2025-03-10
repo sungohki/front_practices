@@ -1,6 +1,8 @@
 /* Portfolio Box*/
 #main > .portfolio_box {
+  /* Portfolio Box Contents */
   & > .main_box_contents {
+    /* Portfolio Box Contents List */
     & > .portfolio_box_list {
       width: 100%;
       display: flex;
@@ -12,12 +14,11 @@
         /* height: 300px; */
         border: 1px lightgrey solid;
         padding: 10px;
+        margin: 0 auto;
         margin-bottom: 60px;
         box-shadow: 2px 1px 4px grey;
         transform: scale(1);
-        transition:
-          0.2s transform ease,
-          0.2s box-shadow ease;
+        transition: 0.2s transform ease, 0.2s box-shadow ease;
         cursor: pointer;
         position: relative;
         display: flex;

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -82,7 +82,7 @@
       <!-- Main Section -->
       <main id="main">
         <!-- About Box -->
-        <div class="main_box_space about_box">
+        <div id="about" class="main_box_space about_box">
           <!-- About Box Title -->
           <div class="main_box_title">
             <p class="sub">who am i</p>
@@ -162,7 +162,7 @@
         </div>
 
         <!-- Features Box -->
-        <div class="main_box_space features_box">
+        <div id="features" class="main_box_space features_box">
           <!-- Features Box Title -->
           <div class="main_box_title">
             <p class="sub">features</p>
@@ -270,174 +270,169 @@
                   </menu>
                 </div>
               </li>
-            </menu>
+            </ul>
           </div>
         </div>
 
         <!-- Portfolio Box -->
-        <div class="main_box_space portfolio_box">
+        <div id="portfolio" class="main_box_space portfolio_box">
           <!-- Portfolio Box Title -->
-            <div class="main_box_title">
-              <p class="sub">portfolio</p>
-              <p>Projects</p>
-            </div>
+          <div class="main_box_title">
+            <p class="sub">portfolio</p>
+            <p>Projects</p>
+          </div>
 
-            <!-- Portfolio Box Contents -->
-            <div class="main_box_contents">
+          <!-- Portfolio Box Contents -->
+          <div class="main_box_contents">
             <!-- Portfolio Box List -->
-              <ul class="portfolio_box_list">
-                <!-- Portfolio Box Item : web publishing -->
-                <li class="portfolio_box_item">
-                  <a
-                    href="https://sungohki.github.io/front_practices/web_design_practice/itemRegisterPage/"
-                  ></a>
-                  <div class="portfolio_preview">
-                    <img src="./images/mock1.png" alt="mock1" />
-                  </div>
-                  <p class="portfolio_category">Publishing</p>
-                  <p class="portfolio_title">상품 등록 페이지</p>
-                </li>
-
-                <!-- Portfolio Box Item : Q-net Practice -->
-                <li class="portfolio_box_item">
-                  <a
-                    href="https://sungohki.github.io/front_practices/web_design_qnet/E4"
-                  ></a>
-                  <div class="portfolio_preview">
-                    <img src="./images/mock2.png" alt="mock2" />
-                  </div>
-                  <p class="portfolio_category">Publishing</p>
-                  <p class="portfolio_title">Q-Net 기출 문제</p>
-                </li>
-
-                <!-- Portfolio Box Item : Front-end Project with vanilla js -->
-                <li class="portfolio_box_item">
-                  <a href="https://sungohki.github.io/momentum_clone.io/"></a>
-                  <div class="portfolio_preview">
-                    <img src="./images/mock3.png" alt="mock3" />
-                  </div>
-                  <p class="portfolio_category">Front-End</p>
-                  <p class="portfolio_title">To do List</p>
-                </li>
-
-                <!-- Portfolio Box Item : Back-end Project -->
-                <li class="portfolio_box_item">
-                  <a href="https://github.com/sungohki/seed_finder_back"></a>
-                  <div class="portfolio_preview">
-                    <img src="./images/mock4.png" alt="mock4" />
-                  </div>
-                  <p class="portfolio_category">Back-End</p>
-                  <p class="portfolio_title">seed finder</p>
+            <ul class="portfolio_box_list">
+              <!-- Portfolio Box Item : web publishing -->
+              <li class="portfolio_box_item">
+                <a
+                  href="https://sungohki.github.io/front_practices/web_design_practice/itemRegisterPage/"
+                ></a>
+                <div class="portfolio_preview">
+                  <img src="./images/mock1.png" alt="mock1" />
                 </div>
-              </ul>
+                <p class="portfolio_category">Publishing</p>
+                <p class="portfolio_title">상품 등록 페이지</p>
+              </li>
+
+              <!-- Portfolio Box Item : Q-net Practice -->
+              <li class="portfolio_box_item">
+                <a
+                  href="https://sungohki.github.io/front_practices/web_design_qnet/E4"
+                ></a>
+                <div class="portfolio_preview">
+                  <img src="./images/mock2.png" alt="mock2" />
+                </div>
+                <p class="portfolio_category">Publishing</p>
+                <p class="portfolio_title">Q-Net 기출 문제</p>
+              </li>
+
+              <!-- Portfolio Box Item : Front-end Project with vanilla js -->
+              <li class="portfolio_box_item">
+                <a href="https://sungohki.github.io/momentum_clone.io/"></a>
+                <div class="portfolio_preview">
+                  <img src="./images/mock3.png" alt="mock3" />
+                </div>
+                <p class="portfolio_category">Front-End</p>
+                <p class="portfolio_title">To do List</p>
+              </li>
+
+              <!-- Portfolio Box Item : Back-end Project -->
+              <li class="portfolio_box_item">
+                <a href="https://github.com/sungohki/seed_finder_back"></a>
+                <div class="portfolio_preview">
+                  <img src="./images/mock4.png" alt="mock4" />
+                </div>
+                <p class="portfolio_category">Back-End</p>
+                <p class="portfolio_title">seed finder</p>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Contact Box -->
-        <div class="main_box_space contact_box">
-            <div class="main_box_title">
-              <p class="sub">contact</p>
-              <p>Send Email</p>
-            </div>
-            <div class="contact">
-              <menu class="contact_info">
-                <li class="phone_number">
-                  <div class="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <p>phone</p>
-                    <p>010-9343-9864</p>
-                  </div>
-                </li>
-                <li class="email_address">
-                  <div class="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M215.4 96L144 96l-36.2 0L96 96l0 8.8L96 144l0 40.4 0 89L.2 202.5c1.6-18.1 10.9-34.9 25.7-45.8L48 140.3 48 96c0-26.5 21.5-48 48-48l76.6 0 49.9-36.9C232.2 3.9 243.9 0 256 0s23.8 3.9 33.5 11L339.4 48 416 48c26.5 0 48 21.5 48 48l0 44.3 22.1 16.4c14.8 10.9 24.1 27.7 25.7 45.8L416 273.4l0-89 0-40.4 0-39.2 0-8.8-11.8 0L368 96l-71.4 0-81.3 0zM0 448L0 242.1 217.6 403.3c11.1 8.2 24.6 12.7 38.4 12.7s27.3-4.4 38.4-12.7L512 242.1 512 448s0 0 0 0c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64c0 0 0 0 0 0zM176 160l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <p>email</p>
-                    <p>sokim1201@naver.com</p>
-                  </div>
-                </li>
-                <li class="personal_address">
-                  <div class="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="content">
-                    <p>address</p>
-                    <p>서울시 강서구 (5호선 발산역 인근 거주)</p>
-                  </div>
-                </li>
-              </menu>
-              <form
-                class="contact_form"
-                method="post"
-                target="iframe1"
-                action="https://script.google.com/macros/s/AKfycbx8fkXnRVyF_AmwEGT2k-jX6Vzxelm9wqPVJxJTpdyfTwJAIOwIDiTTt6wm-pXUh2s/exec"
-              >
-                <label>
-                  <p>name</p>
-                  <input
-                    type="text"
-                    name="name"
-                    class="sender_name"
-                    placeholder="이름을 입력해주세요."
-                    required
-                  />
-                </label>
-                <label>
-                  <p>
-                    email
-                    <span
-                      style="font-size: 0.6em; color: var(--emphasized-color)"
-                      >for reply</span
-                    >
-                  </p>
-                  <input
-                    type="text"
-                    name="email"
-                    class="sender_email"
-                    placeholder="회신할 이메일을 입력해주세요."
-                    required
-                  />
-                </label>
-                <label>
-                  <p>message</p>
-                  <textarea
-                    name="message"
-                    class="sender_message"
-                    placeholder="전송할 내용을 입력해주세요."
-                    required
-                  ></textarea>
-                </label>
-                <button class="send_btn">📩 send</button>
-              </form>
-              <iframe
-                id="iframe1"
-                name="iframe1"
-                style="display: none"
-              ></iframe>
-            </div>
+        <div id="contact" class="main_box_space contact_box">
+          <!-- Contact Box Title -->
+          <div class="main_box_title">
+            <p class="sub">contact</p>
+            <p>Send Email</p>
+          </div>
+
+          <!-- Contact Box Contents -->
+          <div class="main_box_contents">
+            <!-- Contact Box Info -->
+            <ul class="contact_info_list">
+              <li class="phone_number">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <p>phone</p>
+                  <p>010-9343-9864</p>
+                </div>
+              </li>
+              <li class="email_address">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M215.4 96L144 96l-36.2 0L96 96l0 8.8L96 144l0 40.4 0 89L.2 202.5c1.6-18.1 10.9-34.9 25.7-45.8L48 140.3 48 96c0-26.5 21.5-48 48-48l76.6 0 49.9-36.9C232.2 3.9 243.9 0 256 0s23.8 3.9 33.5 11L339.4 48 416 48c26.5 0 48 21.5 48 48l0 44.3 22.1 16.4c14.8 10.9 24.1 27.7 25.7 45.8L416 273.4l0-89 0-40.4 0-39.2 0-8.8-11.8 0L368 96l-71.4 0-81.3 0zM0 448L0 242.1 217.6 403.3c11.1 8.2 24.6 12.7 38.4 12.7s27.3-4.4 38.4-12.7L512 242.1 512 448s0 0 0 0c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64c0 0 0 0 0 0zM176 160l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <p>email</p>
+                  <p>sokim1201@naver.com</p>
+                </div>
+              </li>
+              <li class="personal_address">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <p>address</p>
+                  <p>서울시 강서구 (5호선 발산역 인근 거주)</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Conatct Box Form -->
+            <form
+              class="contact_form"
+              method="post"
+              target="iframe1"
+              action="https://script.google.com/macros/s/AKfycbx8fkXnRVyF_AmwEGT2k-jX6Vzxelm9wqPVJxJTpdyfTwJAIOwIDiTTt6wm-pXUh2s/exec"
+            >
+              <label>
+                <p>name</p>
+                <input
+                  type="text"
+                  name="name"
+                  class="sender_name"
+                  placeholder="이름을 입력해주세요."
+                  required
+                />
+              </label>
+              <label>
+                <p>
+                  email
+                  <span style="font-size: 0.6em; color: var(--emphasized-color)"
+                    >for reply</span
+                  >
+                </p>
+                <input
+                  type="text"
+                  name="email"
+                  class="sender_email"
+                  placeholder="회신할 이메일을 입력해주세요."
+                  required
+                />
+              </label>
+              <label>
+                <p>message</p>
+                <textarea
+                  name="message"
+                  class="sender_message"
+                  placeholder="전송할 내용을 입력해주세요."
+                  required
+                ></textarea>
+              </label>
+              <button class="send_btn">📩 send</button>
+            </form>
+
+            <!-- Contact Box Fomr Iframe -->
+            <iframe id="iframe1" name="iframe1" style="display: none"></iframe>
+          </div>
         </div>
       </main>
 
