@@ -1,3 +1,5 @@
+@import url('./header_kf.css');
+
 /* Banner Cover Space */
 #banner {
   width: 100%;
@@ -87,9 +89,14 @@
     /* Banner Swipe Button */
     & > .banner_swipe_button {
       position: absolute;
-      left: 0;
-      bottom: 20px;
-      width: 100%;
+      left: 50%;
+      bottom: 40px;
+      width: 40px;
+      animation: shake 1s infinite alternate;
+
+      &:hover {
+        animation-play-state: paused;
+      }
 
       & > svg {
         display: block;
@@ -97,14 +104,38 @@
         width: 40px;
         height: 40px;
         fill: white;
-        transform: translate(0, 0);
         cursor: pointer;
         transition: 0.2s all ease;
-        animation: shake 1s infinite alternate;
         &:hover {
           fill: var(--emphasized-color);
-          animation-play-state: paused;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 425px) {
+  #banner {
+    & > .banner_cover_space {
+      & > .banner_main_space {
+        & > .banner_greeting_card {
+          & > .greeting {
+            display: none;
+          }
+          & > .flirting {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 550px) {
+  #banner {
+    & > .banner_cover_space {
+      & > .banner_swipe_button {
+        display: none;
       }
     }
   }
