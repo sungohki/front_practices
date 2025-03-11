@@ -1,16 +1,13 @@
-headerMenuToggleBtn.addEventListener('mouseenter', () => {
-  console.log('enter');
-  headerMenuList.classList.add('on');
+headerMenuList.addEventListener('mouseover', () => {
+  headerMenu.classList.add('on');
 });
-headerMenuToggleBtn.addEventListener('mouseout', () => {
-  console.log('out');
-  headerMenuList.classList.remove('on');
+headerMenuToggleBtn.addEventListener('mouseover', () => {
+  headerMenu.classList.add('on');
 });
-headerMenuToggleBtn.addEventListener('click', () => {
-  //   console.log('click');
-  //   headerMenuList.classList.toggle('on');
+headerMenu.addEventListener('mouseout', () => {
+  headerMenu.classList.remove('on');
 });
-headerMenuToggleBtn.addEventListener('touch', () => {
-  console.log('touch');
-  headerMenuList.classList.toggle('on');
+headerMenuList.addEventListener('click', () => {
+  console.log('click');
+  headerMenu.classList.remove('on');
 });
