@@ -1,7 +1,9 @@
 // Section Elements
+const containerBox = document.querySelector('#container');
+
 const headerTab = document.querySelector('#header');
 const headerMenu = headerTab.querySelector('.header_menu');
-const headerMenuToggleBtn = headerTab.querySelector('.header_menu_toggle');
+const headerMenuToggle = headerTab.querySelector('.header_menu_toggle');
 const headerMenuList = headerTab.querySelector('.header_menu_list');
 
 const bannerSection = document.querySelector('#banner');
