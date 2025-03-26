@@ -1,0 +1,67 @@
+/* Register */
+.reg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #000;
+  width: 100%;
+  height: 60px;
+
+  & > .wrap {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > .logoBox {
+      width: 111px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      & > svg {
+        width: 100%;
+        fill: red;
+      }
+    }
+
+    & > .formBox {
+      display: flex;
+      height: 60%;
+      align-items: center;
+
+      & > p {
+        color: white;
+      }
+      & > button {
+        color: white;
+        border-radius: 4px;
+        height: 100%;
+        padding: 0 30px;
+        font-size: 1.1rem;
+
+        &:nth-child(2) {
+          background-color: red;
+          border: none;
+          margin: 0 6px;
+        }
+
+        &:nth-child(3) {
+          background-color: transparent;
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+}
+
+/* Main Zone */
+.main {
+  width: 95%;
+  max-width: 1800px;
+  height: 900px;
+  margin: 0 auto;
+  background: url('../images/visual1.jpg') center/cover no-repeat;
+}
